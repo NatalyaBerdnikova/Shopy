@@ -62,7 +62,7 @@ gulp.task('browser-sync', function () {
     files: [
       'public/sass/**/*.sass',
       'public/scripts/**/*.js',
-      'public/**/*.html',
+      'public/*.html',
     ],
     notify: false
   });

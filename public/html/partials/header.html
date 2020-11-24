@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <title>@@title</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-  </head>
-  <body>
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <title>@@title</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+  <section class="header-contact">
+    <div class="container">
+      <a href="mailto:info@shopy.com" class="link header-contact__item">
+        <svg class="icon icon--orange">
+          <use xlink:href="images/sprite.svg#mail"></use>
+        </svg>
+        <span>info@shopy.com</span>
+      </a>
+      <a href="tel:+4535553996" class="link header-contact__item">
+        <svg class="icon icon--orange">
+          <use xlink:href="images/sprite.svg#phone"></use>
+        </svg>
+        <span>453 - 5553 - 996</span>
+      </a>
+      <div class="header-contact__social">
+        <a href="#" class="link header-contact__social-item">
+          <svg class="icon">
+            <use xlink:href="images/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+        <a href="#" class="link header-contact__social-item">
+          <svg class="icon">
+            <use xlink:href="images/sprite.svg#twitter"></use>
+          </svg>
+        </a>
+        <a href="#" class="link header-contact__social-item">
+          <svg class="icon">
+            <use xlink:href="images/sprite.svg#google"></use>
+          </svg>
+        </a>
+        <a href="#" class="link header-contact__social-item">
+          <svg class="icon">
+            <use xlink:href="images/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="header">
+    <div class="container">
+      <a href="#">
+        <img src="../../images/logo-full.png" alt="Логотип Shopy">
+      </a>
+      <nav class="header__menu">
+        <a class="link header__menu-item" href="#">Home</a>
+        <a class="link header__menu-item" href="#">Products</a>
+        <a class="link header__menu-item" href="#">Hot Deals</a>
+        <a class="link header__menu-item" href="#">About</a>
+        <a class="link header__menu-item" href="#">Contact</a>
+      </nav>
+      <div class="header__icons">
+        <a href="#" class="link header__icons-item">
+          <svg class="icon">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+        </a>
+        <a href="#" class="link header__icons-item">
+          <svg class="icon">
+            <use xlink:href="images/sprite.svg#user"></use>
+          </svg>
+        </a>
+        <a href="#" class="link header__icons-item header__cart">
+          <div class="header__cart-counter">
+            5
+          </div>
+          <svg class="icon icon--orange">
+            <use xlink:href="images/sprite.svg#cart"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
