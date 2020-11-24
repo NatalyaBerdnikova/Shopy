@@ -58,10 +58,21 @@ img {
   max-width: 100%;
 }
 
+input, button {
+  font-family: "Harmonia", sans-serif;
+  font-size: 14px;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 
 .header-contact {
@@ -141,6 +152,45 @@ img {
   text-align: center;
   background-color: #34404b;
   border-radius: 100px;
+}
+
+.subscribe {
+  margin: 120px 0;
+}
+
+.subscribe__content {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 36px 42px;
+}
+
+.subscribe__button {
+  padding: 17px 30px;
+  background-color: #ff5912;
+  color: white;
+}
+
+.subscribe__title {
+  color: #ff5912;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+
+.subscribe__description {
+  font-style: italic;
+  margin-right: auto;
+}
+
+.subscribe__input-email {
+  margin-left: 10px;
+  min-width: 280px;
+}
+
+.subscribe__input-email::placeholder {
+  font-style: italic;
 }
 
 .footer {
