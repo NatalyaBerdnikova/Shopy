@@ -1,0 +1,95 @@
+.product-card
+  $this: &
+  max-width: 270px
+  height: 365px
+  background-color: white
+  font-size: 18px
+  font-weight: 700
+  padding: 30px 40px 20px
+  text-align: center
+  overflow: hidden
+
+  &__image
+    height: 220px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    margin-bottom: 25px
+    transition: height 300ms
+
+  &__title
+    display: block
+    margin-bottom: 28px
+    transition: color 300ms
+
+  &__price
+    color: $c-primary
+    margin-bottom: 30px
+
+  &__sizes
+    opacity: 0
+    font-weight: normal
+    font-size: 14px
+    margin-bottom: 30px
+    transition: opacity 300ms
+
+  &__colors
+    display: flex
+    justify-content: center
+    opacity: 0
+    transition: opacity 300ms
+    border-bottom: 1px solid transparent
+    padding-bottom: 30px
+    margin-bottom: 30px
+
+    &-item
+      height: 14px
+      width: 14px
+      border-radius: 50px
+
+      & + &
+        margin-left: 3px
+
+    .red
+      background-color: #e12e3f
+
+    .black
+      background-color: #34404b
+
+    .blue
+      background-color: #3ab3ff
+
+    .green
+      background-color: #2fd967
+
+  &__icons
+    opacity: 0
+    transition: opacity 300ms
+
+    .link + .link
+      margin-left: 20px
+
+    .icon
+      max-height: 22px
+
+  &:hover
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+
+    #{$this}__image
+      height: 95px
+
+    #{$this}__title
+      color: $c-primary
+
+    #{$this}__price
+      display: none
+
+    #{$this}__sizes
+      opacity: 1
+
+    #{$this}__colors
+      opacity: 1
+      border-color: #f2f4f7
+
+    #{$this}__icons
+      opacity: 1

@@ -28,6 +28,51 @@
     </div>
   </div>
 </section>
+<section class="section section--arrivals">
+  <div class="container">
+    <p class="section__title">
+      <span class="section__title-word">New</span> arrivals
+    </p>
+    <p class="section__description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+    </p>
+    <div class="products">
+      <div class="products__container">
+        <div>
+          @@include('product-card.html', {
+            "image": "images/products/1.png",
+            "title": "Reebok Track Jacket",
+            "price": "100$"
+          })
+        </div>
+        <div>
+          @@include('product-card.html', {
+            "image": "images/products/2.png",
+            "title": "Reebok Track Jacket",
+            "price": "120$"
+          })
+        </div>
+        <div>
+          @@include('product-card.html', {
+            "image": "images/products/3.png",
+            "title": "Reebok Track Jacket",
+            "price": "150$"
+          })
+        </div>
+        <div>
+          @@include('product-card.html', {
+            "image": "images/products/3.png",
+            "title": "Reebok Track Jacket",
+            "price": "150$"
+          })
+        </div>
+      </div>
+      <a href="#" class="products__loading-button">
+        &bull; &bull; &bull;
+      </a>
+    </div>
+  </div>
+</section>
 
 @@include('subscribe.html')
 
