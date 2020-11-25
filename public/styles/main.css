@@ -227,6 +227,60 @@ input, button {
   margin-left: auto;
 }
 
+.featured {
+  background-image: url(../images/featured_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 215px 0 225px 0;
+}
+
+.featured__content {
+  padding-left: 100px;
+}
+
+.featured__title {
+  color: #ff5912;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 52px;
+  margin-bottom: 25px;
+}
+
+.featured__subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.featured__description {
+  margin-bottom: 63px;
+}
+
+.featured__order-row {
+  display: flex;
+}
+
+.featured__price {
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.featured__link {
+  display: flex;
+  align-items: center;
+  color: #ff5912;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.featured__link .icon {
+  max-width: 24px;
+  max-height: 17px;
+  margin-right: 10px;
+}
+
 .icon {
   display: inline-block;
   max-height: 11px;
