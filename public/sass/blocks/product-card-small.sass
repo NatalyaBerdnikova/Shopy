@@ -1,0 +1,60 @@
+.product-card-small
+  $this: &
+  display: flex
+  background-color: white
+  padding: 36px 20px 36px 30px
+  font-weight: 700
+  transition: box-shadow 300ms
+
+  &__image
+    width: 90px
+    height: 90px
+    margin-right: 25px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+
+  &__text
+    padding: 10px 0 0 27px
+    border-left: 1px solid #f5f5f6
+
+  &__title
+    display: block
+    font-size: 18px
+    margin-bottom: 30px
+
+  &__info
+    position: relative
+    display: flex
+    justify-content: space-between
+    color: $c-primary
+
+  &__rating
+    .icon
+      max-width: 13px
+
+      &:not(.icon--orange)
+        fill: #e8ecf3
+
+  &__add-to-cart
+    position: absolute
+    top: -7px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    opacity: 0
+    background-color: white
+    color: $c-primary
+    font-weight: 600
+    transition: opacity 300ms
+
+    .icon
+      max-height: 26px
+      margin-right: 10px
+
+  &:hover
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+
+    #{$this}__add-to-cart
+      opacity: 1
