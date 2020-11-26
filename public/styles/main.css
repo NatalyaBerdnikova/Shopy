@@ -414,7 +414,7 @@ input, button {
   text-align: center;
   color: #ff5912;
   background-color: white;
-  padding: 12px 0;
+  padding: 14px 0;
   letter-spacing: -3px;
 }
 
@@ -439,6 +439,116 @@ input, button {
 
 .section--arrivals {
   margin-top: 115px;
+}
+
+.promo {
+  margin: 120px 0;
+}
+
+.promo__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promo__hot-deal {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  background-color: white;
+  border: 1px solid #eaedef;
+  padding: 25px 50px 30px 82px;
+  margin-right: 30px;
+}
+
+.promo__hot-deal .icon {
+  max-height: 20px;
+  margin-right: 20px;
+}
+
+.promo__discount {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 12px;
+  z-index: 3;
+  margin-right: 83px;
+}
+
+.promo__discount::before {
+  position: absolute;
+  top: -5px;
+  display: block;
+  content: "";
+  background-color: #ff9060;
+  height: 60px;
+  width: 50px;
+  transform: rotate(-45deg);
+  z-index: -2;
+}
+
+.promo__discount::after {
+  position: absolute;
+  top: -5px;
+  display: block;
+  content: "";
+  background-color: #ff5912;
+  height: 60px;
+  width: 50px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.promo__discount-size {
+  font-weight: 900;
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.promo__price {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 900;
+  color: #ff5912;
+}
+
+.promo__price small {
+  font-size: 22px;
+}
+
+.promo__text {
+  padding-right: 35px;
+  margin-right: 40px;
+  border-right: 1px solid #eaedef;
+}
+
+.promo__title {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.promo__description {
+  font-size: 12px;
+}
+
+.promo__adv {
+  min-width: 470px;
+  border: 1px solid #eaedef;
+  padding: 30px 40px 25px;
+  background-color: white;
+  text-align: center;
+}
+
+.promo__adv-size {
+  font-size: 12px;
+  margin-top: 12px;
+  color: #aeb3b7;
+  letter-spacing: 4px;
 }
 
 .icon {
