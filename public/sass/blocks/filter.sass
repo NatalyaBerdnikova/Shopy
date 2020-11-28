@@ -1,0 +1,106 @@
+.filter
+  &__checkbox
+    & + &
+      margin-top: 25px
+
+    label
+      display: block
+      cursor: pointer
+      user-select: none
+      transition: color 100ms
+      padding: 5px 0
+
+      &::before
+        display: inline-block
+        content: ""
+        margin-right: 10px
+        height: 5px
+        width: 5px
+        border: 4px solid #edf0f2
+        background-color: #edf0f2
+        transition: border-color 100ms
+
+    input
+      display: none
+
+      &:checked + label
+        color: $c-primary
+
+      &:checked + label::before
+        height: 5px
+        width: 5px
+        border-color: $c-primary
+
+  &__item
+    padding: 35px 41px
+    background-color: white
+    width: 270px
+    margin-bottom: 30px
+    font-weight: 600
+    font-size: 16px
+
+  &__title
+    color: $c-primary
+    font-weight: 900
+    font-size: 18px
+    margin-bottom: 35px
+
+  &__link
+    display: block
+    padding: 5px 0
+
+    & + &
+      margin-top: 24px
+
+  &__input-group
+    display: flex
+    margin-top: 20px
+
+  &__input
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+
+    & + &
+      margin-left: 20px
+
+    input
+      background-color: #edf0f2
+      height: 25px
+      max-width: 45px
+      padding: 10px 5px
+      margin-left: 10px
+
+  &__range
+    padding: 35px 0 20px
+
+    .noUi-target
+      background: #edf0f2
+      height: 3px
+      border: unset
+      box-shadow: unset
+      border-radius: unset
+
+    .noUi-handle
+      right: -5px
+      top: -4px
+      height: 11px
+      width: 11px
+      background-color: $c-blue
+      border-radius: 50px
+      box-shadow: unset
+      border: unset
+
+      &::before, &::after
+        content: none
+
+    .noUi-connect
+      background: $c-blue
+
+    .noUi-tooltip
+      font-size: 14px
+      color: $c-blue
+      border: none
+      box-shadow: unset
+      background: unset

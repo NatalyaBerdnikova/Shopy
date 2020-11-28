@@ -40,7 +40,7 @@ gulp.task('svgSprite', function () {
 
 gulp.task('js-libs', function () {
   return gulp.src([
-    // add libs later
+    'public/libs/nouislider.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -48,9 +48,11 @@ gulp.task('js-libs', function () {
 });
 
 gulp.task('css-libs', function () {
-  return gulp.src('public/styles/libs.css')
+  return gulp.src([
+    'public/libs/nouislider.min.css'
+  ])
+    .pipe(concat('libs.min.css'))
     .pipe(cssnano())
-    .pipe(rename({ 'suffix': '.min' }))
     .pipe(gulp.dest('public/styles'));
 });
 
@@ -76,8 +78,8 @@ gulp.task('watch', async function () {
 
 gulp.task('default', gulp.series([
   'sass',
-  // 'js-libs',
-  // 'css-libs',
+  'js-libs',
+  'css-libs',
   'fileinclude',
   'svgSprite',
   'watch',
@@ -87,16 +89,14 @@ gulp.task('default', gulp.series([
 gulp.task('build', async function () {
   gulp.series([
     'sass',
-    // 'js-libs',
-    // 'css-libs',
+    'js-libs',
+    'css-libs',
     'fileinclude',
     'svgSprite'
   ]);
 
-  gulp.src([
-    'public/styles/main.css',
-    // 'public/styles/libs.min.css',
-  ]).pipe(gulp.dest('docs/styles'));
+  gulp.src(['public/styles/*'])
+    .pipe(gulp.dest('docs/styles'));
 
   gulp.src('public/fonts/**/*')
     .pipe(gulp.dest('docs/fonts'));

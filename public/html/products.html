@@ -1,0 +1,139 @@
+@@include('header.html', {
+"title": "Product"
+})
+
+<section>
+  <div class="container">
+    <div class="products-page">
+      <div class="filter products-page__filter">
+        <form method="GET">
+          <div class="filter__item">
+            <p class="filter__title">
+              Categories
+            </p>
+            <a class="filter__link link" href="#">Man</a>
+            <a class="filter__link link" href="#">Woman</a>
+            <a class="filter__link link" href="#">Childrens</a>
+            <a class="filter__link link" href="#">Hot Deals</a>
+          </div>
+          <div class="filter__item">
+            <p class="filter__title">
+              Price Filter
+            </p>
+            <div class="filter__range">
+              <div id="price-range" min="0" max="1500"></div>
+            </div>
+            <div class="filter__input-group">
+              <div class="filter__input">
+                <label for="price-from">From</label>
+                <input type="text" name="price-from" id="price-from">
+              </div>
+              <div class="filter__input">
+                <label for="price-to">To</label>
+                <input type="text" name="price-to" id="price-to">
+              </div>
+            </div>
+          </div>
+          <div class="filter__item">
+            <p class="filter__title">
+              Sizes
+            </p>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="sizes[small]" id="sizesS">
+              <label for="sizesS">Small</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="sizes[medium]" id="sizesM">
+              <label for="sizesM">Medium</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="sizes[large]" id="sizesL">
+              <label for="sizesL">Large</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="sizes[x-large]" id="sizesXL">
+              <label for="sizesXL">X-Large</label>
+            </div>
+          </div>
+          <div class="filter__item">
+            <p class="filter__title">
+              Brands
+            </p>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="brands[reebok]" id="brandsReebok">
+              <label for="brandsReebok">Reebok</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="brands[adidas]" id="brandsAdidas">
+              <label for="brandsAdidas">Adidas</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="brands[nike]" id="brandsNike">
+              <label for="brandsNike">Nike</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" name="brands[active]" id="brandsActive">
+              <label for="brandsActive">Active</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="products products-page__products">
+        <div class="products__container products__container--small">
+          @@include('product-card.html', {
+          "image": "images/products/2.png",
+          "title": "Reebok Track Jacket",
+          "price": "100$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/1.png",
+          "title": "Reebok Track Jacket",
+          "price": "120$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/3.png",
+          "title": "Reebok Track Jacket",
+          "price": "150$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/2.png",
+          "title": "Reebok Track Jacket",
+          "price": "100$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/1.png",
+          "title": "Reebok Track Jacket",
+          "price": "120$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/3.png",
+          "title": "Reebok Track Jacket",
+          "price": "150$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/2.png",
+          "title": "Reebok Track Jacket",
+          "price": "100$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/1.png",
+          "title": "Reebok Track Jacket",
+          "price": "120$"
+          })
+          @@include('product-card.html', {
+          "image": "images/products/3.png",
+          "title": "Reebok Track Jacket",
+          "price": "150$"
+          })
+        </div>
+        <a href="#" class="products__loading-button">
+          &bull; &bull; &bull;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('subscribe.html')
+
+@@include('footer.html')
