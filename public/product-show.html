@@ -4,7 +4,7 @@
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
-  <title>Shopy</title>
+  <title>Product</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Styles -->
@@ -87,36 +87,93 @@
   </header>
 
 
-<section class="featured" id="sectionFeatured">
-  <div class="container">
-    <div class="featured__content">
-      <p class="featured__title">
-        Full winter kit
-      </p>
-      <p class="featured__subtitle">
+
+<section class="product">
+  <div class="container product__container">
+    <div class="product__images">
+      <div class="product__image" style="background-image: url(images/products/5.png);"></div>
+      <div class="product__images-previews">
+        <div class="product__images-preview">
+          <div class="product__images-preview-background" style="background-image: url(images/products/6.png);"></div>
+        </div>
+        <div class="product__images-preview">
+          <div class="product__images-preview-background" style="background-image: url(images/products/7.png);"></div>
+        </div>
+        <div class="product__images-preview product__images-preview--active">
+          <div class="product__images-preview-background" style="background-image: url(images/products/5.png);"></div>
+        </div>
+      </div>
+    </div>
+    <div class="product__content">
+      <p class="product__title">Full winter kit</p>
+      <p class="product__subtitle">
         Half Jacket + Skiny Trousers + Boot leather
       </p>
-      <p class="featured__description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry
+      <p class="product__description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry <br> Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry
       </p>
-      <div class="featured__order-row">
-        <p class="featured__price">
-          Price : 120$
-        </p>
-        <a href="#" class="featured__link">
-          <svg class="icon icon--orange">
-            <use xlink:href="images/sprite.svg#cart"></use>
-          </svg>
-          <span>Order Now</span>
-        </a>
+      <div class="product__choosen">
+        <form action="GET" class="product__form">
+          <div class="product__choosen-size">
+            <span>Choose Size</span> &nbsp; &nbsp;
+            <div class="product__sizes">
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesS" value="S">
+                <label for="sizesS">S</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesM" value="M">
+                <label for="sizesM">M</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesL" value="L">
+                <label for="sizesL">L</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesXL" value="Xl">
+                <label for="sizesXL">XL</label>
+              </div>
+            </div>
+          </div>
+          <div class="product__choosen-quantity">
+            <span>Choose Quantity</span> &nbsp; &nbsp;
+            <a class="link">-</a> &nbsp; &nbsp;
+            <div class="product__counter">0</div> &nbsp; &nbsp;
+            <a class="link">+</a>
+          </div>
+        </form>
+      </div>
+      <div class="product__footer">
+        <p class="product__price">Price : 120$</p>
+        <div class="product__buttons">
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#share"></use>
+            </svg>
+          </a>
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#add-to-cart"></use>
+            </svg>
+          </a>
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#like"></use>
+            </svg>
+          </a>
+          <a href="#" class="product__button-order">Order Now</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="section section--arrivals" id="sectionArrivals">
+<section class="section section--related" id="sectionRelated">
   <div class="container">
     <p class="section__title">
-      <span class="section__title-word">New</span> arrivals
+      <span class="section__title-word">Related</span> products
     </p>
     <p class="section__description">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry
@@ -125,7 +182,7 @@
       <div class="products__container">
         <div>
           <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/1.png');">
+  <div class="product-card__image" style="background-image: url('images/products/3.png');">
   </div>
   <a href="#" class="product-card__title">
     Reebok Track Jacket
@@ -211,7 +268,7 @@
         </div>
         <div>
           <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/3.png');">
+  <div class="product-card__image" style="background-image: url('images/products/1.png');">
   </div>
   <a href="#" class="product-card__title">
     Reebok Track Jacket
@@ -260,7 +317,7 @@
     Reebok Track Jacket
   </a>
   <p class="product-card__price">
-    150$
+    100$
   </p>
   <p class="product-card__sizes">
     sizes : s - m - l - xl
@@ -296,160 +353,6 @@
 
         </div>
       </div>
-      <a href="#" class="products__loading-button">
-        &bull; &bull; &bull;
-      </a>
-    </div>
-  </div>
-</section>
-<section class="promo" id="sectionPromo">
-  <div class="container">
-    <div class="promo__container">
-      <a href="#" class="promo__hot-deal">
-        <div class="promo__discount">
-          <p>Sale</p>
-          <p class="promo__discount-size">50%</p>
-        </div>
-        <div class="promo__text">
-          <p class="promo__title">
-            Full winter kit
-          </p>
-          <p class="promo__description">
-            Half Jacket + Skiny Trousers + Boot leather
-          </p>
-        </div>
-        <div class="promo__price">
-          <svg class="icon icon--orange">
-            <use xlink:href="images/sprite.svg#add-to-cart"></use>
-          </svg>
-          <p>120<small>$</small></p>
-        </div>
-      </a>
-      <a href="#" class="promo__adv">
-        <p>
-          adv <span class="section__title-word">area</span>
-        </p>
-        <p class="promo__adv-size">
-          4 7 0 x 1 0 0
-        </p>
-      </a>
-    </div>
-  </div>
-</section>
-<section class="section" id="sectionBestSales">
-  <div class="container">
-    <p class="section__title">
-      <span class="section__title-word">Best </span>Sales
-    </p>
-    <p class="section__description">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry
-    </p>
-    <div class="products__container products__container--small">
-      <div class="product-card-small">
-  <div class="product-card-small__image" style="background-image: url('images/products/4.png');">
-  </div>
-  <div class="product-card-small__text">
-    <a href="#" class="product-card-small__title">
-      Reebok Track Jacket
-    </a>
-    <div class="product-card-small__info">
-      <div class="product-card-small__rating">
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-      </div>
-      <p class="product-card-small__price">
-        100$
-      </p>
-      <a href="#" class="product-card-small__add-to-cart">
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#add-to-cart"></use>
-        </svg>
-        <span>add to cart</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-      <div class="product-card-small">
-  <div class="product-card-small__image" style="background-image: url('images/products/4.png');">
-  </div>
-  <div class="product-card-small__text">
-    <a href="#" class="product-card-small__title">
-      Reebok Track Jacket
-    </a>
-    <div class="product-card-small__info">
-      <div class="product-card-small__rating">
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-      </div>
-      <p class="product-card-small__price">
-        100$
-      </p>
-      <a href="#" class="product-card-small__add-to-cart">
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#add-to-cart"></use>
-        </svg>
-        <span>add to cart</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-      <div class="product-card-small">
-  <div class="product-card-small__image" style="background-image: url('images/products/4.png');">
-  </div>
-  <div class="product-card-small__text">
-    <a href="#" class="product-card-small__title">
-      Reebok Track Jacket
-    </a>
-    <div class="product-card-small__info">
-      <div class="product-card-small__rating">
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-        <svg class="icon">
-          <use xlink:href="images/sprite.svg#star-fill"></use>
-        </svg>
-      </div>
-      <p class="product-card-small__price">
-        100$
-      </p>
-      <a href="#" class="product-card-small__add-to-cart">
-        <svg class="icon icon--orange">
-          <use xlink:href="images/sprite.svg#add-to-cart"></use>
-        </svg>
-        <span>add to cart</span>
-      </a>
-    </div>
-  </div>
-</div>
-
     </div>
   </div>
 </section>

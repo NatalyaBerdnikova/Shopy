@@ -1,0 +1,133 @@
+@@include('header.html', {
+  "title": "Product"
+})
+
+
+<section class="product">
+  <div class="container product__container">
+    <div class="product__images">
+      <div class="product__image" style="background-image: url(images/products/5.png);"></div>
+      <div class="product__images-previews">
+        <div class="product__images-preview">
+          <div class="product__images-preview-background" style="background-image: url(images/products/6.png);"></div>
+        </div>
+        <div class="product__images-preview">
+          <div class="product__images-preview-background" style="background-image: url(images/products/7.png);"></div>
+        </div>
+        <div class="product__images-preview product__images-preview--active">
+          <div class="product__images-preview-background" style="background-image: url(images/products/5.png);"></div>
+        </div>
+      </div>
+    </div>
+    <div class="product__content">
+      <p class="product__title">Full winter kit</p>
+      <p class="product__subtitle">
+        Half Jacket + Skiny Trousers + Boot leather
+      </p>
+      <p class="product__description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry <br> Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry
+      </p>
+      <div class="product__choosen">
+        <form action="GET" class="product__form">
+          <div class="product__choosen-size">
+            <span>Choose Size</span> &nbsp; &nbsp;
+            <div class="product__sizes">
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesS" value="S">
+                <label for="sizesS">S</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesM" value="M">
+                <label for="sizesM">M</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesL" value="L">
+                <label for="sizesL">L</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesXL" value="Xl">
+                <label for="sizesXL">XL</label>
+              </div>
+            </div>
+          </div>
+          <div class="product__choosen-quantity">
+            <span>Choose Quantity</span> &nbsp; &nbsp;
+            <a class="link">-</a> &nbsp; &nbsp;
+            <div class="product__counter">0</div> &nbsp; &nbsp;
+            <a class="link">+</a>
+          </div>
+        </form>
+      </div>
+      <div class="product__footer">
+        <p class="product__price">Price : 120$</p>
+        <div class="product__buttons">
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#share"></use>
+            </svg>
+          </a>
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#add-to-cart"></use>
+            </svg>
+          </a>
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#like"></use>
+            </svg>
+          </a>
+          <a href="#" class="product__button-order">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--related" id="sectionRelated">
+  <div class="container">
+    <p class="section__title">
+      <span class="section__title-word">Related</span> products
+    </p>
+    <p class="section__description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+    </p>
+    <div class="products">
+      <div class="products__container">
+        <div>
+          @@include('product-card.html', {
+          "image": "images/products/3.png",
+          "title": "Reebok Track Jacket",
+          "price": "100$"
+          })
+        </div>
+        <div>
+          @@include('product-card.html', {
+          "image": "images/products/2.png",
+          "title": "Reebok Track Jacket",
+          "price": "120$"
+          })
+        </div>
+        <div>
+          @@include('product-card.html', {
+          "image": "images/products/1.png",
+          "title": "Reebok Track Jacket",
+          "price": "150$"
+          })
+        </div>
+        <div>
+          @@include('product-card.html', {
+          "image": "images/products/3.png",
+          "title": "Reebok Track Jacket",
+          "price": "100$"
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('subscribe.html')
+
+@@include('footer.html')

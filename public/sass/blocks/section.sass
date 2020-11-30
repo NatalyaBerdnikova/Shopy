@@ -1,4 +1,5 @@
 .section
+  $this: &
   text-align: center
 
   &__title
@@ -15,3 +16,9 @@
 
   &--arrivals
     margin-top: 115px
+
+  &--related
+    margin-top: 115px
+
+    #{$this}__title
+      font-size: 28px
