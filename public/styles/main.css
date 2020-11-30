@@ -384,10 +384,6 @@ input, button {
   height: 95px;
 }
 
-.product-card:hover .product-card__title {
-  color: #ff5912;
-}
-
 .product-card:hover .product-card__price {
   display: none;
 }
@@ -879,6 +875,10 @@ input, button {
 }
 
 .product__choosen-quantity {
+  display: flex;
+}
+
+.product__choosen-quantity .js-productCounter {
   display: flex;
 }
 

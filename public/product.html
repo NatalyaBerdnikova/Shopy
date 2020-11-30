@@ -4,7 +4,7 @@
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
-  <title>Products</title>
+  <title>Product</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Styles -->
@@ -87,86 +87,104 @@
   </header>
 
 
-<section>
-  <div class="container">
-    <div class="products-page">
-      <div class="filter products-page__filter">
-        <form method="GET">
-          <div class="filter__item">
-            <p class="filter__title">
-              Categories
-            </p>
-            <a class="filter__link link" href="#">Man</a>
-            <a class="filter__link link" href="#">Woman</a>
-            <a class="filter__link link" href="#">Childrens</a>
-            <a class="filter__link link" href="#">Hot Deals</a>
-          </div>
-          <div class="filter__item">
-            <p class="filter__title">
-              Price Filter
-            </p>
-            <div class="filter__range">
-              <div id="price-range" min="0" max="1500"></div>
-            </div>
-            <div class="filter__input-group">
-              <div class="filter__input">
-                <label for="price-from">From</label>
-                <input type="text" name="price-from" id="price-from">
+
+<section class="product">
+  <div class="container product__container">
+    <div class="product__images">
+      <div class="product__image" style="background-image: url(images/products/5.png);"></div>
+      <div class="product__images-previews">
+        <div class="product__images-preview js-changeProductBackground">
+          <div class="product__images-preview-background" style="background-image: url(images/products/3.png);"></div>
+        </div>
+        <div class="product__images-preview js-changeProductBackground">
+          <div class="product__images-preview-background" style="background-image: url(images/products/2.png);"></div>
+        </div>
+        <div class="product__images-preview js-changeProductBackground product__images-preview--active">
+          <div class="product__images-preview-background" style="background-image: url(images/products/5.png);"></div>
+        </div>
+      </div>
+    </div>
+    <div class="product__content">
+      <p class="product__title">Full winter kit</p>
+      <p class="product__subtitle">
+        Half Jacket + Skiny Trousers + Boot leather
+      </p>
+      <p class="product__description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry <br> Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry
+      </p>
+      <div class="product__choosen">
+        <form action="GET" class="product__form">
+          <div class="product__choosen-size">
+            <span>Choose Size</span> &nbsp; &nbsp;
+            <div class="product__sizes">
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesS" value="S">
+                <label for="sizesS">S</label>
               </div>
-              <div class="filter__input">
-                <label for="price-to">To</label>
-                <input type="text" name="price-to" id="price-to">
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesM" value="M">
+                <label for="sizesM">M</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesL" value="L">
+                <label for="sizesL">L</label>
+              </div>
+              &nbsp; <span> - </span> &nbsp;
+              <div class="product__sizes-item">
+                <input type="radio" name="size" id="sizesXL" value="Xl">
+                <label for="sizesXL">XL</label>
               </div>
             </div>
           </div>
-          <div class="filter__item">
-            <p class="filter__title">
-              Sizes
-            </p>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="sizes[small]" id="sizesS">
-              <label for="sizesS">Small</label>
-            </div>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="sizes[medium]" id="sizesM">
-              <label for="sizesM">Medium</label>
-            </div>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="sizes[large]" id="sizesL">
-              <label for="sizesL">Large</label>
-            </div>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="sizes[x-large]" id="sizesXL">
-              <label for="sizesXL">X-Large</label>
-            </div>
-          </div>
-          <div class="filter__item">
-            <p class="filter__title">
-              Brands
-            </p>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="brands[reebok]" id="brandsReebok">
-              <label for="brandsReebok">Reebok</label>
-            </div>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="brands[adidas]" id="brandsAdidas">
-              <label for="brandsAdidas">Adidas</label>
-            </div>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="brands[nike]" id="brandsNike">
-              <label for="brandsNike">Nike</label>
-            </div>
-            <div class="filter__checkbox">
-              <input type="checkbox" name="brands[active]" id="brandsActive">
-              <label for="brandsActive">Active</label>
+          <div class="product__choosen-quantity">
+            <span>Choose Quantity</span> &nbsp; &nbsp;
+            <div class="js-productCounter" data-max-count="10" data-min-count="0">
+              <a class="link js-productCounterDec">-</a> &nbsp; &nbsp;
+              <div class="product__counter js-productCounterCount">0</div> &nbsp; &nbsp;
+              <a class="link js-productCounterInc">+</a>
             </div>
           </div>
         </form>
       </div>
-      <div class="products products-page__products">
-        <div class="products__container products__container--small">
+      <div class="product__footer">
+        <p class="product__price">Price : 120$</p>
+        <div class="product__buttons">
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#share"></use>
+            </svg>
+          </a>
+          <a href="#" class="link js-addToCart">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#add-to-cart"></use>
+            </svg>
+          </a>
+          <a href="#" class="link">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#like"></use>
+            </svg>
+          </a>
+          <a href="#" class="product__button-order">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--related" id="sectionRelated">
+  <div class="container">
+    <p class="section__title">
+      <span class="section__title-word">Related</span> products
+    </p>
+    <p class="section__description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+    </p>
+    <div class="products">
+      <div class="products__container">
+        <div>
           <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/2.png');">
+  <div class="product-card__image" style="background-image: url('images/products/3.png');">
   </div>
   <a href="product.html" class="product-card__title link">
     Reebok Track Jacket
@@ -206,88 +224,8 @@
   </div>
 </div>
 
-          <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/1.png');">
-  </div>
-  <a href="product.html" class="product-card__title link">
-    Reebok Track Jacket
-  </a>
-  <p class="product-card__price">
-    120$
-  </p>
-  <p class="product-card__sizes">
-    sizes : s - m - l - xl
-  </p>
-  <div class="product-card__colors">
-    <div class="product-card__colors-item red">
-    </div>
-    <div class="product-card__colors-item black">
-    </div>
-    <div class="product-card__colors-item blue">
-    </div>
-    <div class="product-card__colors-item green">
-    </div>
-  </div>
-  <div class="product-card__icons">
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#share"></use>
-      </svg>
-    </a>
-    <a href="#" class="link js-addToCart">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#add-to-cart"></use>
-      </svg>
-    </a>
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#like"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-
-          <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/3.png');">
-  </div>
-  <a href="product.html" class="product-card__title link">
-    Reebok Track Jacket
-  </a>
-  <p class="product-card__price">
-    150$
-  </p>
-  <p class="product-card__sizes">
-    sizes : s - m - l - xl
-  </p>
-  <div class="product-card__colors">
-    <div class="product-card__colors-item red">
-    </div>
-    <div class="product-card__colors-item black">
-    </div>
-    <div class="product-card__colors-item blue">
-    </div>
-    <div class="product-card__colors-item green">
-    </div>
-  </div>
-  <div class="product-card__icons">
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#share"></use>
-      </svg>
-    </a>
-    <a href="#" class="link js-addToCart">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#add-to-cart"></use>
-      </svg>
-    </a>
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#like"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-
+        </div>
+        <div>
           <div class="product-card">
   <div class="product-card__image" style="background-image: url('images/products/2.png');">
   </div>
@@ -295,47 +233,6 @@
     Reebok Track Jacket
   </a>
   <p class="product-card__price">
-    100$
-  </p>
-  <p class="product-card__sizes">
-    sizes : s - m - l - xl
-  </p>
-  <div class="product-card__colors">
-    <div class="product-card__colors-item red">
-    </div>
-    <div class="product-card__colors-item black">
-    </div>
-    <div class="product-card__colors-item blue">
-    </div>
-    <div class="product-card__colors-item green">
-    </div>
-  </div>
-  <div class="product-card__icons">
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#share"></use>
-      </svg>
-    </a>
-    <a href="#" class="link js-addToCart">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#add-to-cart"></use>
-      </svg>
-    </a>
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#like"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-
-          <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/1.png');">
-  </div>
-  <a href="product.html" class="product-card__title link">
-    Reebok Track Jacket
-  </a>
-  <p class="product-card__price">
     120$
   </p>
   <p class="product-card__sizes">
@@ -370,131 +267,10 @@
   </div>
 </div>
 
-          <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/3.png');">
-  </div>
-  <a href="product.html" class="product-card__title link">
-    Reebok Track Jacket
-  </a>
-  <p class="product-card__price">
-    150$
-  </p>
-  <p class="product-card__sizes">
-    sizes : s - m - l - xl
-  </p>
-  <div class="product-card__colors">
-    <div class="product-card__colors-item red">
-    </div>
-    <div class="product-card__colors-item black">
-    </div>
-    <div class="product-card__colors-item blue">
-    </div>
-    <div class="product-card__colors-item green">
-    </div>
-  </div>
-  <div class="product-card__icons">
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#share"></use>
-      </svg>
-    </a>
-    <a href="#" class="link js-addToCart">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#add-to-cart"></use>
-      </svg>
-    </a>
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#like"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-
-          <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/2.png');">
-  </div>
-  <a href="product.html" class="product-card__title link">
-    Reebok Track Jacket
-  </a>
-  <p class="product-card__price">
-    100$
-  </p>
-  <p class="product-card__sizes">
-    sizes : s - m - l - xl
-  </p>
-  <div class="product-card__colors">
-    <div class="product-card__colors-item red">
-    </div>
-    <div class="product-card__colors-item black">
-    </div>
-    <div class="product-card__colors-item blue">
-    </div>
-    <div class="product-card__colors-item green">
-    </div>
-  </div>
-  <div class="product-card__icons">
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#share"></use>
-      </svg>
-    </a>
-    <a href="#" class="link js-addToCart">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#add-to-cart"></use>
-      </svg>
-    </a>
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#like"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-
+        </div>
+        <div>
           <div class="product-card">
   <div class="product-card__image" style="background-image: url('images/products/1.png');">
-  </div>
-  <a href="product.html" class="product-card__title link">
-    Reebok Track Jacket
-  </a>
-  <p class="product-card__price">
-    120$
-  </p>
-  <p class="product-card__sizes">
-    sizes : s - m - l - xl
-  </p>
-  <div class="product-card__colors">
-    <div class="product-card__colors-item red">
-    </div>
-    <div class="product-card__colors-item black">
-    </div>
-    <div class="product-card__colors-item blue">
-    </div>
-    <div class="product-card__colors-item green">
-    </div>
-  </div>
-  <div class="product-card__icons">
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#share"></use>
-      </svg>
-    </a>
-    <a href="#" class="link js-addToCart">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#add-to-cart"></use>
-      </svg>
-    </a>
-    <a href="#" class="link">
-      <svg class="icon">
-        <use xlink:href="images/sprite.svg#like"></use>
-      </svg>
-    </a>
-  </div>
-</div>
-
-          <div class="product-card">
-  <div class="product-card__image" style="background-image: url('images/products/3.png');">
   </div>
   <a href="product.html" class="product-card__title link">
     Reebok Track Jacket
@@ -535,9 +311,49 @@
 </div>
 
         </div>
-        <a href="#" class="products__loading-button">
-          &bull; &bull; &bull;
-        </a>
+        <div>
+          <div class="product-card">
+  <div class="product-card__image" style="background-image: url('images/products/3.png');">
+  </div>
+  <a href="product.html" class="product-card__title link">
+    Reebok Track Jacket
+  </a>
+  <p class="product-card__price">
+    100$
+  </p>
+  <p class="product-card__sizes">
+    sizes : s - m - l - xl
+  </p>
+  <div class="product-card__colors">
+    <div class="product-card__colors-item red">
+    </div>
+    <div class="product-card__colors-item black">
+    </div>
+    <div class="product-card__colors-item blue">
+    </div>
+    <div class="product-card__colors-item green">
+    </div>
+  </div>
+  <div class="product-card__icons">
+    <a href="#" class="link">
+      <svg class="icon">
+        <use xlink:href="images/sprite.svg#share"></use>
+      </svg>
+    </a>
+    <a href="#" class="link js-addToCart">
+      <svg class="icon">
+        <use xlink:href="images/sprite.svg#add-to-cart"></use>
+      </svg>
+    </a>
+    <a href="#" class="link">
+      <svg class="icon">
+        <use xlink:href="images/sprite.svg#like"></use>
+      </svg>
+    </a>
+  </div>
+</div>
+
+        </div>
       </div>
     </div>
   </div>

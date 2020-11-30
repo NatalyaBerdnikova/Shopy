@@ -33,3 +33,56 @@ if (priceRange) {
     priceInput.value = Math.trunc(values[handle].replace('$', ''));
   });
 }
+
+let changeProductBackgroundElements = document.querySelectorAll('.js-changeProductBackground')
+
+if (changeProductBackgroundElements) {
+  let productImage = document.querySelector('.product__image');
+  for (let i = 0; i < changeProductBackgroundElements.length; i++) {
+    changeProductBackgroundElements[i].addEventListener('click', function() {
+      let imageActive = document.querySelector('.product__images-preview--active');
+      imageActive.classList.remove('product__images-preview--active');
+      changeProductBackgroundElements[i].classList.add('product__images-preview--active');
+
+      let backgroundPreview = changeProductBackgroundElements[i].querySelector('.product__images-preview-background');
+      productImage.setAttribute('style', backgroundPreview.getAttribute('style'));
+    });
+  }
+}
+
+let productCounter = document.querySelector('.js-productCounter')
+
+if (productCounter) {
+  let productCounterCount = productCounter.querySelector('.js-productCounterCount')
+  let productCounterDec = productCounter.querySelector('.js-productCounterDec')
+  productCounterDec.addEventListener('click', function() {
+    let number = Number(productCounterCount.textContent);
+    if (number > Number(productCounter.dataset.minCount)) {
+      productCounterCount.textContent = --number;
+    }
+  })
+  let productCounterInc = productCounter.querySelector('.js-productCounterInc')
+  productCounterInc.addEventListener('click', function() {
+    let number = Number(productCounterCount.textContent);
+    if (number < Number(productCounter.dataset.maxCount)) {
+      productCounterCount.textContent = ++number;
+    }
+  })
+}
+
+let addToCartElements = document.querySelectorAll('.js-addToCart')
+let cartCounter = document.querySelector('.js-cartCounter')
+
+if ((addToCartElements.length > 0) && cartCounter) {
+  for (let i = 0; i < addToCartElements.length; i++) {
+    addToCartElements[i].addEventListener('click', function() {
+      let number = Number(cartCounter.textContent);
+      cartCounter.textContent = ++number;
+      localStorage.setItem('cart-count', number)
+    });
+  }
+
+  if (localStorage.getItem('cart-count')) {
+    cartCounter.textContent = localStorage.getItem('cart-count');
+  }
+}

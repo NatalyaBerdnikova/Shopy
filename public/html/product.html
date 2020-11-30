@@ -8,13 +8,13 @@
     <div class="product__images">
       <div class="product__image" style="background-image: url(images/products/5.png);"></div>
       <div class="product__images-previews">
-        <div class="product__images-preview">
-          <div class="product__images-preview-background" style="background-image: url(images/products/6.png);"></div>
+        <div class="product__images-preview js-changeProductBackground">
+          <div class="product__images-preview-background" style="background-image: url(images/products/3.png);"></div>
         </div>
-        <div class="product__images-preview">
-          <div class="product__images-preview-background" style="background-image: url(images/products/7.png);"></div>
+        <div class="product__images-preview js-changeProductBackground">
+          <div class="product__images-preview-background" style="background-image: url(images/products/2.png);"></div>
         </div>
-        <div class="product__images-preview product__images-preview--active">
+        <div class="product__images-preview js-changeProductBackground product__images-preview--active">
           <div class="product__images-preview-background" style="background-image: url(images/products/5.png);"></div>
         </div>
       </div>
@@ -55,9 +55,11 @@
           </div>
           <div class="product__choosen-quantity">
             <span>Choose Quantity</span> &nbsp; &nbsp;
-            <a class="link">-</a> &nbsp; &nbsp;
-            <div class="product__counter">0</div> &nbsp; &nbsp;
-            <a class="link">+</a>
+            <div class="js-productCounter" data-max-count="10" data-min-count="0">
+              <a class="link js-productCounterDec">-</a> &nbsp; &nbsp;
+              <div class="product__counter js-productCounterCount">0</div> &nbsp; &nbsp;
+              <a class="link js-productCounterInc">+</a>
+            </div>
           </div>
         </form>
       </div>
@@ -69,7 +71,7 @@
               <use xlink:href="images/sprite.svg#share"></use>
             </svg>
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link js-addToCart">
             <svg class="icon">
               <use xlink:href="images/sprite.svg#add-to-cart"></use>
             </svg>
